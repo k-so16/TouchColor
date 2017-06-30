@@ -37,10 +37,11 @@ div#game {
   border:   solid 2px;
 }
 
-div#model, div#emulate {
-  text-align: center;
+div#model, div#imitation {
+  text-align: center; 
 }
 
+/* light design */
 div.lights {
   display: inline-block;
   margin: 10px 10px;
@@ -48,20 +49,25 @@ div.lights {
   height:  40px;
 }
 
+div.lights_out{
+  /* when turned off */
+  background: #2c2c2c;
+}
+
 div.red {
-  background: #5a0000;
+  background: #ff0000;
 }
 
 div.blue {
-  background: #00005a;
+  background: #0000ff;
 }
 
 div.yellow {
-  background: #5a5a00;
+  background: #ffff00;
 }
 
 div.green {
-  background: #005800;
+  background: #00b800;
 }
 
 div#start_message {
