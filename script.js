@@ -28,6 +28,7 @@ $(function() {
 
       // begin game
       $('#game').before('<div id="level">');
+      $('#level').after($('<div>').addClass('mode'));
       showOrder(list, false);
       $('#game').after('<div id="stock">');
       $('#stock').text("stock remaining: " + life);
@@ -55,7 +56,7 @@ $(function() {
       light.addClass(colorList[clicked]);
     }, delayTime);
 
-    delayTime += 2000;
+    delayTime += 1000;
     // turn off light after specified time
     setTimeout(() => {
       light.removeClass(colorList[clicked]);
@@ -76,6 +77,12 @@ $(function() {
         $('#stock').text("stock remaining: " + life);
 	if(!life) {
 	  alert("Game Over");
+	  $('.mode').attr('id', 'result');
+	  if(list.length > 1) {
+	    $('.mode').text("You cleared Level " + (list.length - 1) + ".");
+	  } else {
+	    $('.mode').text("Come on.");
+	  }
 	  touchable = false;
 	  return;
 	}
@@ -101,6 +108,8 @@ $(function() {
     }
 
     $('#level').text("Level " + list.length);
+    $('.mode').attr('id', 'sample');
+    $('.mode').text("Remember blinked order.");
 
     console.log(list.map(x => {return colorList[x]}).join());
     var delayTime = 0;
@@ -117,7 +126,7 @@ $(function() {
 	light.addClass(targetColor);
       }, delayTime, node, color);
 
-      delayTime += 2000;
+      delayTime += 1500;
       // turn off light after specified time
       setTimeout((index, light, targetColor) => {
 	light.removeClass(targetColor);
@@ -125,6 +134,8 @@ $(function() {
 
 	// if next is empty, set mode touchable
 	if(index + 1 == list.length) {
+	  $('.mode').attr('id', 'imitation');
+          $('.mode').text("Reproduce the blinked order.");
 	  touchable = true;
 	}
       }, delayTime, i, node, color);

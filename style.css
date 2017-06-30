@@ -98,6 +98,30 @@ div#level {
   font-size: 16pt;
 }
 
+div.mode {
+  margin: 0px auto;
+  padding: 10px 20px;
+  width: 260px;
+  color: #ffffff;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+div.mode#sample {
+  background: #0000ff;
+}
+
+div.mode#imitation {
+  background: #ff8800;
+}
+
+div.mode#result {
+  background: #ffffff;
+  color: #ff0000;
+  /* font-style: italic; */
+  font-weight: bold;
+}
+
 div#stock {
   width: 180px;
   margin: 0px auto;
