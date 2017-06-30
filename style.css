@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/***********************/
+/*                     */
+/*  foundation design  */
+/*                     */
+/***********************/
+
 html {
   height: 100%;
 }
@@ -10,12 +16,25 @@ body {
   height:  100%;
 }
 
+hr {
+  margin:  0px;
+  padding: 0px;
+}
+
+
+
+/************************/
+/*                      */
+/*  game screen design  */
+/*                      */
+/************************/
+
 div#game {
+  position: relative;
   margin:   0px auto;
   padding:  20px 30px;
   width:    280px;
   border:   solid 2px;
-  position: relative;
 }
 
 div#model, div#emulate {
@@ -29,19 +48,19 @@ div.lights {
   height:  40px;
 }
 
-div.dark_red {
+div.red {
   background: #5a0000;
 }
 
-div.dark_blue {
+div.blue {
   background: #00005a;
 }
 
-div.dark_yellow {
+div.yellow {
   background: #5a5a00;
 }
 
-div.dark_green {
+div.green {
   background: #005800;
 }
 
@@ -80,3 +99,13 @@ footer div#copy {
   font-family: "Courier New", monospace;
   text-align:  right;
 }
+
+
+
+/***********************************************************/
+/*                                                         */
+/*                                                         */
+/*  Copyright (C) 2017 Soichiro Kato All Rights Reserved.  */
+/*                                                         */
+/*                                                         */
+/***********************************************************/
