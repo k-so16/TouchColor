@@ -90,6 +90,14 @@ div#start_message:hover {
   color: #d8d8d8;
 }
 
+div#level {
+  margin: 0px auto;
+  padding: 10px 20px;
+  width:    280px;
+  background: #c8e0ff;
+  font-size: 16pt;
+}
+
 div#stock {
   width: 180px;
   margin: 0px auto;
