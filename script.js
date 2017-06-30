@@ -1,10 +1,9 @@
 $(function() {
   var list = [];
-  $('body').on('click', () => {
-    genList(list);
-    dispColor(list);
-  });
 
+  $('#game').css('background', '#c8c8c8');
+  var startButton = $('<div id="start_message">').text("click/touch me");
+  startButton.prependTo('#game');
 });
 
 function genList(list)
@@ -15,30 +14,7 @@ function genList(list)
   }
 
   var size = list.length;
-
   for(var i = 0; i <= size; i++) {
     list[i] = Math.floor(Math.random() * 4);
-  }
-}
-
-function dispColor(list)
-{
-  for(var i = 0; i < list.length; i++) {
-    switch(list[i]) {
-      case 0:
-        console.log("red");
-	break;
-      case 1:
-        console.log("blue");
-	break;
-      case 2:
-        console.log("yellow");
-	break;
-      case 3:
-        console.log("green");
-	break;
-      default:
-        console.log("warning: list has invalid value at list[" + i + "]");
-    }
   }
 }
