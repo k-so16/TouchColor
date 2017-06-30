@@ -10,4 +10,8 @@ you can spend a life on repeating.
 The game is over when you have no stock of life.
 
 ## How to Play
-
+First, press the blue button.
+Then, the color will be turn on and off, 
+so please remember the order turned on.
+After sample completely played, 
+recall order and click the light.
