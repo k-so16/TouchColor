@@ -37,10 +37,6 @@ div#game {
   border:   solid 2px;
 }
 
-div#model, div#imitation {
-  text-align: center; 
-}
-
 /* light design */
 div.lights {
   display: inline-block;

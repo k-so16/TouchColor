@@ -4,14 +4,24 @@ $(function() {
   const colorList = ["red", "blue", "yellow", "green"];
   var list = [];
 
-  $('#game').css('background', '#c8c8c8');
+  // append lights turned off
+  for(var i = 0; i < colorList.length; i++) {
+    var light =
+      $('<div id="' + colorList[i] + '">').addClass('lights lights_out');
+    light.appendTo('#game');
+  }
+
+  // add start button
   var startButton = $('<div id="start_message">').text("click/touch me");
   startButton.prependTo('#game');
 
+  // the process when start button clicked
   startButton.on('click', () => {
     startButton.fadeOut(() => {
       $('#game').css('background', '#ffffff');
       startButton.remove();
+
+      // begin game
       showOrder(list, false);
     });
   });
@@ -22,10 +32,20 @@ $(function() {
       genList(list);
     }
     for(var i = 0; i < list.length; i++) {
-      console.log(colorList[list[i]]);
+      var color = colorList[list[i]];
+      console.log(color);
+
+      var node = $('.lights').eq(list[i]);
+      node.removeClass('lights_out');
+      node.addClass(color);
+      setTimeout(() => {
+	node.removeClass(color);
+	node.addClass('lights_out');
+      }, 2000);
     }
   }
 });
+
 
 function genList(list)
 {
