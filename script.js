@@ -28,6 +28,8 @@ $(function() {
 
       // begin game
       showOrder(list, false);
+      $('#game').after('<div id="stock">');
+      $('#stock').text("stock remaining: " + life);
     });
   });
 
@@ -70,6 +72,7 @@ $(function() {
 	}
       } else {
 	life--;
+        $('#stock').text("stock remaining: " + life);
 	if(!life) {
 	  alert("Game Over");
 	  touchable = false;
