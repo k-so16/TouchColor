@@ -27,7 +27,10 @@ $(function() {
       startButton.remove();
 
       // begin game
+      $('#game').before('<div id="level">');
       showOrder(list, false);
+      $('#game').after('<div id="stock">');
+      $('#stock').text("stock remaining: " + life);
     });
   });
 
@@ -70,6 +73,7 @@ $(function() {
 	}
       } else {
 	life--;
+        $('#stock').text("stock remaining: " + life);
 	if(!life) {
 	  alert("Game Over");
 	  touchable = false;
@@ -95,6 +99,8 @@ $(function() {
       // create new order if not repeat mode
       genList(list);
     }
+
+    $('#level').text("Level " + list.length);
 
     console.log(list.map(x => {return colorList[x]}).join());
     var delayTime = 0;
