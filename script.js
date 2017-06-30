@@ -21,7 +21,7 @@ $(function() {
   startButton.prependTo('#game');
 
   // the process when start button clicked
-  startButton.on('click', () => {
+  startButton.on('tap click', () => {
     startButton.fadeOut(() => {
       $('#game').css('background', '#ffffff');
       startButton.remove();
@@ -36,7 +36,7 @@ $(function() {
   });
 
   // lighting by touching
-  $('.lights').on('click', function(e) {
+  $('.lights').on('tap click', function(e) {
     if(!touchable) {
       console.log("untouchable");
       return;
