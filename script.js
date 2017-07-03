@@ -19,6 +19,7 @@ $(function() {
   // add start button
   var startButton =
     $('<div id="start_message">').text("クリック/タップしてください");
+  startButton.css('font-size', '15pt');
   startButton.prependTo('#game');
 
   // the process when start button clicked
