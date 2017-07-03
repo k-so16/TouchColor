@@ -17,7 +17,8 @@ $(function() {
   }
 
   // add start button
-  var startButton = $('<div id="start_message">').text("click/touch me");
+  var startButton =
+    $('<div id="start_message">').text("クリック/タップしてください");
   startButton.prependTo('#game');
 
   // the process when start button clicked
@@ -31,7 +32,7 @@ $(function() {
       $('#level').after($('<div>').addClass('mode'));
       showOrder(list, false);
       $('#game').after('<div id="stock">');
-      $('#stock').text("stock remaining: " + life);
+      $('#stock').text("残機: " + life);
     });
   });
 
@@ -74,14 +75,16 @@ $(function() {
 	}
       } else {
 	life--;
-        $('#stock').text("stock remaining: " + life);
+        $('#stock').text("残機: " + life);
 	if(!life) {
 	  alert("Game Over");
 	  $('.mode').attr('id', 'result');
 	  if(list.length > 1) {
-	    $('.mode').text("You cleared Level " + (list.length - 1) + ".");
+	    $('.mode').text(
+	      "Level " + (list.length - 1) + "をクリアしました"
+	    );
 	  } else {
-	    $('.mode').text("Come on.");
+	    $('.mode').text("マジで?");
 	  }
 	  touchable = false;
 	  return;
@@ -109,7 +112,7 @@ $(function() {
 
     $('#level').text("Level " + list.length);
     $('.mode').attr('id', 'sample');
-    $('.mode').text("Remember blinked order.");
+    $('.mode').text("点灯した順序を覚えてください。");
 
     console.log(list.map(x => {return colorList[x]}).join());
     var delayTime = 0;
@@ -135,7 +138,7 @@ $(function() {
 	// if next is empty, set mode touchable
 	if(index + 1 == list.length) {
 	  $('.mode').attr('id', 'imitation');
-          $('.mode').text("Reproduce the blinked order.");
+          $('.mode').text("順番通りに点灯した場所を押してください。");
 	  touchable = true;
 	}
       }, delayTime, i, node, color);
