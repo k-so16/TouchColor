@@ -1,17 +1,18 @@
 # TouchColor
-The game for your testing limit to memolizing.
+記憶力の限界を試すゲーム
 
-## Rules
-Please memorize twinkled color order and emulate order.
-You have 3 stock of life.
-If you have wrong order, stock will be decreased.
-If you forgot the order and want to see the order again,
-you can spend a life on repeating.
-The game is over when you have no stock of life.
+## ルール
+色の点灯した順序を覚えて、その順序通りに点灯したところを押してください。
+残機は3つあります。
+もし間違えると、残機が1つ減ります。
+もし順序を忘れて、もう一度点灯順序を見たい時は、
+残機を1つ消費することで点灯順序をもう一度見ることができます。
+(未実装)
+残機が0になったらゲームオーバーです。
 
-## How to Play
-First, press the blue button.
-Then, the color will be turn on and off, 
-so please remember the order turned on.
-After sample completely played, 
-recall order and click the light.
+## 遊び方
+まず、"クリック/タップ" ボタンを押します。
+そしたら、色の点灯が始まりますので、
+色の点灯した順序を覚えてください。
+見本の点灯が終わったら、
+点灯順序を思い出して、点灯した場所を順序通りに押してください。
