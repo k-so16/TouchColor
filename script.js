@@ -149,7 +149,8 @@ $(function() {
 	    // register click event
 	    repeat.on('tap click', () => {
               if(confirm(
-	        "Would you like to spend a stock and repat again?")) {
+	        "Would you like to spend a stock and repat again?\n"
+		+ "stock will be " + (life - 1) + ".")) {
 	        // decrement stock
                 life--;
                 $('#stock').text("stock remaining: " + life);

@@ -152,6 +152,7 @@ div#repeat {
 }
 
 div#repeat:hover {
+  cursor: pointer;
   color: #c8c8c8;
   background: #0000a8;
 }
