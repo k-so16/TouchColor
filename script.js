@@ -141,9 +141,22 @@ $(function() {
 	  touchable = true;
 
 	  // set repeat button
-	  var repeat = $('<div id="repeat">');
-	  repeat.text("repeat again");
-	  $('#stock').after(repeat);
+	  if(life > 1) {
+	    var repeat = $('<div id="repeat">');
+	    repeat.text("repeat again");
+	    $('#stock').after(repeat);
+
+	    // register click event
+	    repeat.on('tap click', () => {
+              if(confirm(
+	        "Would you like to spend a stock and repat again?")) {
+	        // decrement stock
+                life--;
+                $('#stock').text("stock remaining: " + life);
+                showOrder(list, true);
+              }
+            });
+	  }
 	}
       }, delayTime, i, node, color);
     }
