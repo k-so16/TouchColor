@@ -67,6 +67,7 @@ div.green {
   background: #00b800;
 }
 
+/* begining message design */
 div#start_message {
   position: absolute;
   top: 50%;
@@ -90,6 +91,7 @@ div#start_message:hover {
   color: #d8d8d8;
 }
 
+/* level indicator design */
 div#level {
   margin: 0px auto;
   padding: 10px 20px;
@@ -98,6 +100,7 @@ div#level {
   font-size: 16pt;
 }
 
+/* mode indicator design */
 div.mode {
   margin: 0px auto;
   padding: 10px 20px;
@@ -115,6 +118,7 @@ div.mode#imitation {
   background: #ff8800;
 }
 
+/* result indicator design */
 div.mode#result {
   background: #ffffff;
   color: #ff0000;
@@ -122,6 +126,7 @@ div.mode#result {
   font-weight: bold;
 }
 
+/* stock indicator design */
 div#stock {
   width: 180px;
   margin: 0px auto;
@@ -132,6 +137,31 @@ div#stock {
   font-size: 13pt;
   text-align: center;
 }
+
+/* repeat button design */
+div#repeat {
+  width: 160px;
+  margin: 0px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  color: #ffffff;
+  background: #0000ff;
+  font-size: 15pt;
+  text-align: center;
+}
+
+div#repeat:hover {
+  color: #c8c8c8;
+  background: #0000a8;
+}
+
+
+/*******************/
+/*                 */
+/*  footer design  */
+/*                 */
+/*******************/
 
 footer {
   margin:     0px 20px;

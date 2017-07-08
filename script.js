@@ -56,7 +56,7 @@ $(function() {
       light.addClass(colorList[clicked]);
     }, delayTime);
 
-    delayTime += 1000;
+    delayTime += 700;
     // turn off light after specified time
     setTimeout(() => {
       light.removeClass(colorList[clicked]);
@@ -102,6 +102,8 @@ $(function() {
     touchable = false;
     pos = 0;
 
+    $('#repeat').remove();
+
     if(!repeat) {
       // create new order if not repeat mode
       genList(list);
@@ -137,6 +139,11 @@ $(function() {
 	  $('.mode').attr('id', 'imitation');
           $('.mode').text("Reproduce the blinked order.");
 	  touchable = true;
+
+	  // set repeat button
+	  var repeat = $('<div id="repeat">');
+	  repeat.text("repeat again");
+	  $('#stock').after(repeat);
 	}
       }, delayTime, i, node, color);
     }
